@@ -4,13 +4,11 @@ const webpack = require('webpack');
 const WebpackBar = require('webpackbar');
 const path = require('path');
 module.exports = {
-  entry: {
-    index: path.join(__dirname, "/example/index.js")
-  },
+  entry: path.resolve(__dirname, './example/index.js'),
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'index.js'
   },
   module: {
     rules: [
